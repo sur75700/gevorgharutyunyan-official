@@ -1,0 +1,64 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#artist",
+      "name": "Gevorg Harutyunyan",
+      "alternateName": [
+        "Գևորգ Հարությունյան",
+        "Геворг Арутюнян",
+        "GEVORG HARUTYUNYAN"
+      ],
+      "url": "https://sur75700.github.io/gevorgharutyunyan-official/",
+      "image": "https://sur75700.github.io/gevorgharutyunyan-official/assets/hero.jpeg",
+      "sameAs": [
+        "https://youtu.be/7nr2GSGUavk",
+        "https://www.facebook.com/gevorg.harutyunyan.524",
+        "https://www.instagram.com/gevorg_harutyunyan_singer?igsh=MWt4bjByd21zaDZtaA=="
+      ],
+      "jobTitle": "Singer",
+      "telephone": "+374 99 775 510",
+      "knowsAbout": [
+        "Armenian music",
+        "Armenian popurri",
+        "Live performance",
+        "Weddings",
+        "Celebrations"
+      ]
+    },
+    {
+      "@type": "MusicRecording",
+      "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#popurri",
+      "name": "Popurri",
+      "alternateName": [
+        "Պոպուրի",
+        "Попурри"
+      ],
+      "byArtist": {
+        "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#artist"
+      },
+      "genre": [
+        "Armenian Music",
+        "Popurri",
+        "Folk"
+      ],
+      "inLanguage": "hy",
+      "sameAs": [
+        "https://youtu.be/7nr2GSGUavk"
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#video",
+      "name": "Gevorg Harutyunyan - Popurri",
+      "description": "Official video/audio for Popurri by Gevorg Harutyunyan.",
+      "thumbnailUrl": "https://sur75700.github.io/gevorgharutyunyan-official/assets/wide.jpeg",
+      "embedUrl": "https://www.youtube.com/embed/7nr2GSGUavk",
+      "url": "https://youtu.be/7nr2GSGUavk",
+      "musicBy": {
+        "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#artist"
+      }
+    }
+  ]
+}
