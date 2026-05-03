@@ -192,11 +192,84 @@
   <link rel="preload" as="image" href="/assets/hero.jpeg">
   <link rel="preload" as="image" href="/assets/social-preview.jpg">
 
+
+<style id="gh-monogram-logo-style">
+.gh-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gh-logo-img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 14px 38px rgba(216, 173, 85, .22);
+}
+
+.gh-hero-logo {
+  width: min(210px, 52vw);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 0 24px;
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(216, 173, 85, .18);
+}
+
+.gh-footer-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 12px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .gh-logo-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .gh-hero-logo {
+    width: min(170px, 48vw);
+    margin-bottom: 18px;
+  }
+}
+</style>
+
+
+<link rel="icon" type="image/png" href="/assets/logo/gh-monogram.png">
+<link rel="apple-touch-icon" href="/assets/logo/gh-monogram.png">
+
 </head>
 <body>
-<header><div class="wrap"><nav><a class="brand" href="assets/music/gevorg-harutyunyan-popurri.wav" download><span class="crown">♛</span><span>Gevorg Harutyunyan Official</span></a><div class="rightnav"><div class="navlinks"><a href="#music" data-i18n="navMusic">Երաժշտություն</a><a href="#about" data-i18n="navAbout">Մասին</a><a href="#videos" data-i18n="navVideos">Տեսանյութեր</a><a href="#gallery" data-i18n="navGallery">Նկարներ</a><a href="#download" data-i18n="navDownload">Ներբեռնել</a><a href="#booking" data-i18n="navBooking">Պատվերներ</a><a href="#contact" data-i18n="navContact">Կապ</a></div><div class="langs"><button class="lang-btn active" type="button" data-lang="hy">HY</button><button class="lang-btn" type="button" data-lang="en">EN</button><button class="lang-btn" type="button" data-lang="ru">RU</button></div></div></nav></div></header>
+<header><div class="wrap"><nav><a class="brand" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
+<img src="assets/logo/gh-monogram.png" alt="GH" class="gh-logo-img">
+<span class="sr-only">Gevorg Harutyunyan Official Music</span>
+</a><div class="rightnav"><div class="navlinks"><a href="#music" data-i18n="navMusic">Երաժշտություն</a><a href="#about" data-i18n="navAbout">Մասին</a><a href="#videos" data-i18n="navVideos">Տեսանյութեր</a><a href="#gallery" data-i18n="navGallery">Նկարներ</a><a href="#download" data-i18n="navDownload">Ներբեռնել</a><a href="#booking" data-i18n="navBooking">Պատվերներ</a><a href="#contact" data-i18n="navContact">Կապ</a></div><div class="langs"><button class="lang-btn active" type="button" data-lang="hy">HY</button><button class="lang-btn" type="button" data-lang="en">EN</button><button class="lang-btn" type="button" data-lang="ru">RU</button></div></div></nav></div></header>
 <main>
-<section class="hero" id="music"><div class="wrap grid"><div><span class="badge" data-i18n="badge">👑 Պաշտոնական արտիստի կայք</span><h1 data-i18n="artistName">Գևորգ Հարությունյան</h1><p class="subtitle" data-i18n="subtitle">Պաշտոնական երաժշտական էջ</p><p class="lead" data-i18n="lead">Հայկական երաժշտություն, հզոր կատարում և պաշտոնական հարթակ՝ տեսանյութերի, պատվերների, կապի և ապագա streaming հղումների համար։</p><div class="actions"><a class="btn" href="https://youtu.be/7nr2GSGUavk" target="_blank" rel="noopener" data-i18n="watchBtn">▶ Դիտել YouTube-ում</a><a class="btn secondary" href="tel:+37499775510" data-i18n="callBtn">☎ Զանգահարել</a><a class="btn secondary" href="#booking" data-i18n="bookingBtn">✦ Պատվերներ</a></div></div><div class="portrait-card"><img src="assets/hero.jpeg" alt="Gevorg Harutyunyan portrait"><div class="portrait-caption"><strong data-i18n="captionName">Գևորգ Հարությունյան</strong><span data-i18n="captionText">Հայկական երգիչ • Պաշտոնական երաժշտական էջ</span></div></div></div></section>
+<section class="hero" id="music"><div class="wrap grid"><div>
+<img src="assets/logo/gh-monogram.png" alt="GH logo" class="gh-hero-logo">
+
+          <span class="badge" data-i18n="badge">👑 Պաշտոնական արտիստի կայք</span><h1 data-i18n="artistName">Գևորգ Հարությունյան</h1><p class="subtitle" data-i18n="subtitle">Պաշտոնական երաժշտական էջ</p><p class="lead" data-i18n="lead">Հայկական երաժշտություն, հզոր կատարում և պաշտոնական հարթակ՝ տեսանյութերի, պատվերների, կապի և ապագա streaming հղումների համար։</p><div class="actions"><a class="btn" href="https://youtu.be/7nr2GSGUavk" target="_blank" rel="noopener" data-i18n="watchBtn">▶ Դիտել YouTube-ում</a><a class="btn secondary" href="tel:+37499775510" data-i18n="callBtn">☎ Զանգահարել</a><a class="btn secondary" href="#booking" data-i18n="bookingBtn">✦ Պատվերներ</a></div></div><div class="portrait-card"><img src="assets/hero.jpeg" alt="Gevorg Harutyunyan portrait"><div class="portrait-caption"><strong data-i18n="captionName">Գևորգ Հարությունյան</strong><span data-i18n="captionText">Հայկական երգիչ • Պաշտոնական երաժշտական էջ</span></div></div></div></section>
 <section id="videos"><div class="wrap"><div class="section-head"><h2 data-i18n="videoTitle">Պաշտոնական տեսանյութ</h2><p class="muted" data-i18n="videoText">Դիտեք “Պոպուրի” պաշտոնական կատարումը YouTube-ում։ Հետագայում այս բաժնում կարող ենք ավելացնել նոր տեսանյութեր։</p></div><div class="video-card"><iframe class="video" src="https://www.youtube.com/embed/7nr2GSGUavk" title="Gevorg Harutyunyan - Popurri" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="cards"><a class="box" href="https://youtu.be/7nr2GSGUavk" target="_blank"><div class="label">YouTube</div><div class="value" data-i18n="ytNow">Բացել պաշտոնական տեսանյութը</div><div class="status" data-i18n="ytStatus">Պաշտոնական release-ը հասանելի է</div></a><div class="box"><div class="label" data-i18n="moreVideosLabel">Նոր տեսանյութեր</div><div class="value" data-i18n="comingSoon">Շուտով</div><div class="status" data-i18n="videoSlot">Այստեղ կավելացնենք հաջորդ երգերը</div></div><div class="box"><div class="label">Streaming</div><div class="value" data-i18n="comingSoon">Շուտով</div><div class="status" data-i18n="streamStatus">Spotify, Apple Music, Instagram, TikTok</div></div></div></div></section>
 <section id="about"><div class="wrap"><div class="section-head"><h2 data-i18n="aboutTitle">Արտիստի մասին</h2><p class="muted" data-i18n="aboutText">Գևորգ Հարությունյանը հայկական երաժշտության կատարող է։ Այս պաշտոնական կայքը ստեղծված է տեսանյութերի, կապի, պատվերների և երաժշտական հղումների համար։</p></div><div class="cards"><div class="box"><div class="label" data-i18n="artistLabel">Արտիստ</div><div class="value" data-i18n="artistName">Գևորգ Հարությունյան</div><div class="status">Gevorg Harutyunyan • Геворг Арутюнян</div></div><div class="box"><div class="label" data-i18n="styleLabel">Ոճ</div><div class="value" data-i18n="styleValue">Հայկական / Պոպուրի</div><div class="status" data-i18n="styleStatus">Հզոր բեմական էներգիա</div></div><div class="box"><div class="label" data-i18n="eventsLabel">Միջոցառումներ</div><div class="value" data-i18n="eventsValue">Հարսանիքներ և խնջույքներ</div><div class="status" data-i18n="eventsStatus">Պատվերների համար կապ հաստատեք</div></div></div></div></section>
 <section id="gallery"><div class="wrap"><div class="section-head"><h2 data-i18n="galleryTitle">Նկարներ</h2><p class="muted" data-i18n="galleryText">Պաշտոնական լուսանկարներ՝ բեմական և artist profile-ի համար։</p></div><div class="gallery"><img src="assets/wide.jpeg" alt="Gevorg Harutyunyan stage photo"><div class="gallery-side"><img src="assets/portrait.jpeg" alt="Gevorg Harutyunyan portrait stage"><img src="assets/hero.jpeg" alt="Gevorg Harutyunyan official portrait"></div></div></div></section>
@@ -243,7 +316,7 @@
   <p>Gevorg Harutyunyan Popurri official music. Գևորգ Հարությունյան Պոպուրի պաշտոնական երաժշտություն. Геворг Арутюнян Попурри официальная музыка.</p>
 </section>
 
-<footer><div class="wrap footer-row"><div>© 2026 Gevorg Harutyunyan. All rights reserved.</div><div data-i18n="footerText">Official Music • Armenian Popurri • Multilingual Artist Website</div></div></footer>
+<footer><div class="wrap footer-row"><div><img src="assets/logo/gh-monogram.png" alt="GH" class="gh-footer-logo">© 2026 Gevorg Harutyunyan. All rights reserved.</div><div data-i18n="footerText">Official Music • Armenian Popurri • Multilingual Artist Website</div></div></footer>
 <script>
 const translations={
 hy:{rightsNote:"© 2026 Գևորգ Հարությունյան։ Բոլոր ներբեռնումները հասանելի են պաշտոնական artist կայքից։",listenBadge:"Official Audio",listenTitle:"Լսել նախքան ներբեռնելը",listenText:"Լսեք “Պոպուրի” կատարումը պաշտոնական կայքում և ներբեռնեք MP3 տարբերակը։",wavNote:"WAV բարձր որակի տարբերակը հասանելի է ուղիղ ներբեռնման համար՝ official archive quality։",navDownload:"Ներբեռնել",downloadTitle:"Ներբեռնել երգը",downloadText:"Ներբեռնեք “Պոպուրի” կատարումը պաշտոնական կայքից՝ MP3, WAV բարձր որակով կամ MP4 video տարբերակով։",downloadMp3:"⬇ Ներբեռնել MP3",downloadMp3Text:"Արագ ներբեռնում հեռախոսի և share-ի համար",downloadWav:"◆ Ներբեռնել WAV",downloadWavText:"Բարձր որակ՝ արխիվի և պրոֆ օգտագործման համար",downloadVideo:"▣ Ներբեռնել Video",downloadVideoText:"Կարճ video տարբերակ՝ social share-ի համար",navMusic:"Երաժշտություն",navAbout:"Մասին",navVideos:"Տեսանյութեր",navGallery:"Նկարներ",navBooking:"Պատվերներ",navContact:"Կապ",badge:"👑 Պաշտոնական արտիստի կայք",artistName:"Գևորգ Հարությունյան",subtitle:"Պաշտոնական երաժշտական էջ",lead:"Հայկական երաժշտություն, հզոր կատարում և պաշտոնական հարթակ՝ տեսանյութերի, պատվերների, կապի և ապագա streaming հղումների համար։",watchBtn:"▶ Դիտել YouTube-ում",callBtn:"☎ Զանգահարել",bookingBtn:"✦ Պատվերներ",captionName:"Գևորգ Հարությունյան",captionText:"Հայկական երգիչ • Պաշտոնական երաժշտական էջ",videoTitle:"Պաշտոնական տեսանյութ",videoText:"Դիտեք “Պոպուրի” պաշտոնական կատարումը YouTube-ում։ Հետագայում այս բաժնում կարող ենք ավելացնել նոր տեսանյութեր։",ytNow:"Բացել պաշտոնական տեսանյութը",ytStatus:"Պաշտոնական release-ը հասանելի է",moreVideosLabel:"Նոր տեսանյութեր",comingSoon:"Շուտով",videoSlot:"Այստեղ կավելացնենք հաջորդ երգերը",streamStatus:"Spotify, Apple Music, Instagram, TikTok",aboutTitle:"Արտիստի մասին",aboutText:"Գևորգ Հարությունյանը հայկական երաժշտության կատարող է։ Այս պաշտոնական կայքը ստեղծված է տեսանյութերի, կապի, պատվերների և երաժշտական հղումների համար։",artistLabel:"Արտիստ",styleLabel:"Ոճ",styleValue:"Հայկական / Պոպուրի",styleStatus:"Հզոր բեմական էներգիա",eventsLabel:"Միջոցառումներ",eventsValue:"Հարսանիքներ և խնջույքներ",eventsStatus:"Պատվերների համար կապ հաստատեք",galleryTitle:"Նկարներ",galleryText:"Պաշտոնական լուսանկարներ՝ բեմական և artist profile-ի համար։",linksTitle:"Պաշտոնական հղումներ",linksText:"Այստեղ հավաքված են պաշտոնական social և երաժշտական հղումները։",availableNow:"Հասանելի է հիմա",openFacebook:"Բացել Facebook-ը",openInstagram:"Բացել Instagram-ը",afterDistribution:"Distribution-ից հետո",reelsStories:"Reels / Stories music library",bookingTitle:"Պատվերներ և համագործակցություն",bookingText:"Հարսանիքների, ընտանեկան միջոցառումների, խնջույքների, համերգների և համագործակցության համար կապ հաստատեք։",phoneTitle:"Հեռախոս",phoneText:"Ուղիղ զանգ պատվերների համար",whatsappText:"Գրել WhatsApp-ով",telegramText:"Գրել Telegram-ով",instagramText:"Հետևել և գրել Instagram-ում",notice:"Կայքը պատրաստված է պաշտոնական artist profile-ի համար՝ SEO metadata, multilingual content, schema.org data, sitemap և Google indexing հիմքով։",contactTitle:"Կապ",contactText:"Պաշտոնական կապ՝ պատվերների, տեսանյութերի, համագործակցության և երաժշտական հարցերի համար։",footerText:"Official Music • Armenian Popurri • Multilingual Artist Website"},
