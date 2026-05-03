@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sur75700.github.io/gevorgharutyunyan-official/sitemap.xml
+Sitemap: https://gevorgharutyunyan.com/sitemap.xml

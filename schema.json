@@ -3,15 +3,15 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#artist",
+      "@id": "https://gevorgharutyunyan.com/#artist",
       "name": "Gevorg Harutyunyan",
       "alternateName": [
         "Գևորգ Հարությունյան",
         "Геворг Арутюнян",
         "GEVORG HARUTYUNYAN"
       ],
-      "url": "https://sur75700.github.io/gevorgharutyunyan-official/",
-      "image": "https://sur75700.github.io/gevorgharutyunyan-official/assets/hero.jpeg",
+      "url": "https://gevorgharutyunyan.com/",
+      "image": "https://gevorgharutyunyan.com/assets/hero.jpeg",
       "sameAs": [
         "https://youtu.be/7nr2GSGUavk",
         "https://www.facebook.com/gevorg.harutyunyan.524",
@@ -29,14 +29,14 @@
     },
     {
       "@type": "MusicRecording",
-      "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#popurri",
+      "@id": "https://gevorgharutyunyan.com/#popurri",
       "name": "Popurri",
       "alternateName": [
         "Պոպուրի",
         "Попурри"
       ],
       "byArtist": {
-        "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#artist"
+        "@id": "https://gevorgharutyunyan.com/#artist"
       },
       "genre": [
         "Armenian Music",
@@ -50,14 +50,14 @@
     },
     {
       "@type": "VideoObject",
-      "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#video",
+      "@id": "https://gevorgharutyunyan.com/#video",
       "name": "Gevorg Harutyunyan - Popurri",
       "description": "Official video/audio for Popurri by Gevorg Harutyunyan.",
-      "thumbnailUrl": "https://sur75700.github.io/gevorgharutyunyan-official/assets/wide.jpeg",
+      "thumbnailUrl": "https://gevorgharutyunyan.com/assets/wide.jpeg",
       "embedUrl": "https://www.youtube.com/embed/7nr2GSGUavk",
       "url": "https://youtu.be/7nr2GSGUavk",
       "musicBy": {
-        "@id": "https://sur75700.github.io/gevorgharutyunyan-official/#artist"
+        "@id": "https://gevorgharutyunyan.com/#artist"
       }
     }
   ]
