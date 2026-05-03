@@ -1,2 +1,7 @@
 *.zip
+backups/
 backup_before_arqa_v2/
+*.old
+*.bak
+.DS_Store
+Thumbs.db

@@ -15,7 +15,7 @@
       "sameAs": [
         "https://youtu.be/7nr2GSGUavk",
         "https://www.facebook.com/gevorg.harutyunyan.524",
-        "https://www.instagram.com/gevorg_harutyunyan_singer?igsh=MWt4bjByd21zaDZtaA=="
+        "https://www.instagram.com/gevorg_harutyunyan_singer"
       ],
       "jobTitle": "Singer",
       "telephone": "+374 99 775 510",
@@ -41,9 +41,13 @@
       "genre": [
         "Armenian Music",
         "Popurri",
-        "Folk"
+        "Folk",
+        "Live Performance"
       ],
       "inLanguage": "hy",
+      "url": "https://gevorgharutyunyan.com/",
+      "audio": "https://gevorgharutyunyan.com/assets/music/gevorg-harutyunyan-popurri.mp3",
+      "encodingFormat": "audio/mpeg",
       "sameAs": [
         "https://youtu.be/7nr2GSGUavk"
       ]
@@ -53,12 +57,44 @@
       "@id": "https://gevorgharutyunyan.com/#video",
       "name": "Gevorg Harutyunyan - Popurri",
       "description": "Official video/audio for Popurri by Gevorg Harutyunyan.",
-      "thumbnailUrl": "https://gevorgharutyunyan.com/assets/wide.jpeg",
+      "thumbnailUrl": [
+        "https://gevorgharutyunyan.com/assets/social-preview.jpg",
+        "https://gevorgharutyunyan.com/assets/wide.jpeg"
+      ],
       "embedUrl": "https://www.youtube.com/embed/7nr2GSGUavk",
+      "contentUrl": "https://gevorgharutyunyan.com/assets/music/gevorg-harutyunyan-popurri.mp4",
       "url": "https://youtu.be/7nr2GSGUavk",
       "musicBy": {
         "@id": "https://gevorgharutyunyan.com/#artist"
+      },
+      "inLanguage": "hy"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gevorgharutyunyan.com/#website",
+      "url": "https://gevorgharutyunyan.com/",
+      "name": "Gevorg Harutyunyan Official",
+      "publisher": {
+        "@id": "https://gevorgharutyunyan.com/#artist"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gevorgharutyunyan.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Official Music",
+          "item": "https://gevorgharutyunyan.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Popurri",
+          "item": "https://gevorgharutyunyan.com/#music"
+        }
+      ]
     }
   ]
 }
