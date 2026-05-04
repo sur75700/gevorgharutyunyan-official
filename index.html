@@ -259,6 +259,151 @@
 <link rel="icon" type="image/png" href="/assets/logo/gh-monogram.png">
 <link rel="apple-touch-icon" href="/assets/logo/gh-monogram.png">
 
+
+<style id="mobile-download-overlap-fix">
+@media (max-width: 768px) {
+
+  /* hero wrapper-ը դարձնում ենք ուղղահայաց */
+  .hero,
+  .hero-section,
+  .hero-wrap,
+  .hero-inner,
+  .hero-grid,
+  .hero-layout,
+  #hero {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* hero photo/content block-երը բնական հոսքի մեջ */
+  .hero-media,
+  .hero-image,
+  .hero-photo,
+  .hero-cover,
+  .hero-content,
+  .hero-text,
+  .hero-overlay,
+  .hero-card,
+  .hero-panel {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    translate: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* եթե hero image-ը շատ բարձր է՝ վերահսկում ենք */
+  .hero-media img,
+  .hero-image img,
+  .hero-photo img,
+  .hero-cover img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 540px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* downloads section-ը պիտի ԻՋՆԻ նկարի տակ */
+  .downloads,
+  .download-section,
+  .downloads-section,
+  .download-block,
+  .download-wrap,
+  .download-cards,
+  .download-grid,
+  #downloads,
+  section[id*="download"] {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    translate: none !important;
+    margin-top: 18px !important;
+    margin-bottom: 0 !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  /* cards-ը 1-column */
+  .download-grid,
+  .downloads-grid,
+  .download-cards,
+  .download-list,
+  #downloads .grid,
+  section[id*="download"] .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  /* ամեն card բնական դիրքով */
+  .download-card,
+  .downloads .card,
+  #downloads .card,
+  .music-card,
+  .cta-card,
+  section[id*="download"] article,
+  section[id*="download"] .card {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    translate: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* մեծ heading-ը mobile-ում մի քիչ փոքրացնենք, որ չխառնվի */
+  h1,
+  .hero h1,
+  .hero-title,
+  .section-title {
+    font-size: clamp(32px, 8vw, 48px) !important;
+    line-height: 1.05 !important;
+    word-break: break-word !important;
+  }
+
+  /* պարագրաֆների շնչելու տեղ */
+  p,
+  .hero p,
+  .hero-description,
+  .section-subtitle {
+    line-height: 1.5 !important;
+  }
+
+  /* եթե section container-ը շատ ձախ/աջ է կպած */
+  .container,
+  .wrapper,
+  .section-inner,
+  .hero-inner,
+  .downloads,
+  #downloads {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
