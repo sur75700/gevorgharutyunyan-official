@@ -113,6 +113,43 @@
           "item": "https://gevorgharutyunyan.com/#music"
         }
       ]
+    },
+    {
+      "@type": "MusicRecording",
+      "@id": "https://gevorgharutyunyan.com/#gone-gone",
+      "name": "Gone Gone",
+      "byArtist": {
+        "@id": "https://gevorgharutyunyan.com/#artist"
+      },
+      "genre": [
+        "Armenian Music",
+        "Pop",
+        "Live Performance"
+      ],
+      "inLanguage": "hy",
+      "url": "https://gevorgharutyunyan.com/#gone-gone-release",
+      "audio": "https://gevorgharutyunyan.com/assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp3",
+      "encodingFormat": "audio/mpeg",
+      "sameAs": [
+        "https://youtu.be/mbJNzNj7ACA"
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://gevorgharutyunyan.com/#gone-gone-video",
+      "name": "Gevorg Harutyunyan - Gone Gone",
+      "description": "Official video/audio for Gone Gone by Gevorg Harutyunyan.",
+      "thumbnailUrl": [
+        "https://img.youtube.com/vi/mbJNzNj7ACA/hqdefault.jpg"
+      ],
+      "embedUrl": "https://www.youtube.com/embed/mbJNzNj7ACA",
+      "contentUrl": "https://gevorgharutyunyan.com/assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp4",
+      "url": "https://youtu.be/mbJNzNj7ACA",
+      "uploadDate": "2026-05-16T12:00:00+04:00",
+      "musicBy": {
+        "@id": "https://gevorgharutyunyan.com/#artist"
+      },
+      "inLanguage": "hy"
     }
   ]
 }</script>
@@ -542,6 +579,104 @@
 }
 </style>
 
+
+<style id="gone-gone-release-style">
+#gone-gone-release {
+  position: relative;
+  z-index: 10;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(216,173,85,.16), transparent 30%),
+    linear-gradient(180deg, #050505 0%, #080704 55%, #0d0904 100%);
+  border-top: 1px solid rgba(216,173,85,.22);
+  border-bottom: 1px solid rgba(216,173,85,.16);
+}
+
+.release-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff1b7;
+  font-weight: 950;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-top: 14px;
+}
+
+.release-arrow-link span {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fff1b7, #d8ad55);
+  color: #120b03;
+  box-shadow: 0 12px 35px rgba(216,173,85,.28);
+}
+
+.release-feature-card {
+  border-radius: 34px;
+  border: 1px solid rgba(255,255,255,.13);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(216,173,85,.16), transparent 30%),
+    linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.035)),
+    #080808;
+  box-shadow: 0 30px 90px rgba(0,0,0,.48);
+  padding: 22px;
+  overflow: hidden;
+}
+
+.release-thumb {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,.40);
+  margin-bottom: 18px;
+}
+
+.gone-audio {
+  margin-top: 20px;
+  border-radius: 28px;
+  padding: 20px;
+  border: 1px solid rgba(216,173,85,.32);
+  background: rgba(255,255,255,.055);
+}
+
+.gone-audio audio {
+  width: 100%;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  #gone-gone-release {
+    padding-top: 42px !important;
+    padding-bottom: 48px !important;
+    margin-top: 0 !important;
+    clear: both !important;
+  }
+
+  #gone-gone-release .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  #gone-gone-release .cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .release-feature-card {
+    padding: 18px;
+    border-radius: 28px;
+  }
+
+  .release-arrow-link {
+    font-size: 13px;
+  }
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
@@ -584,6 +719,65 @@
         <div class="value" data-i18n="downloadVideo">▣ Ներբեռնել Video</div>
         <div class="status" data-i18n="downloadVideoText">Կարճ video տարբերակ՝ social share-ի համար</div>
       </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="gone-gone-release">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="download-badge">New Official Release</span>
+      <h2>Gone Gone</h2>
+      <p class="muted">
+        Նոր պաշտոնական երգ՝ Gevorg Harutyunyan-ի կատարմամբ։ Popurri-ն մնում է առաջին release-ը, իսկ “Gone Gone”-ը ավելացվել է որպես նոր երգ։
+      </p>
+      <a class="release-arrow-link" href="https://youtu.be/mbJNzNj7ACA" target="_blank" rel="noopener">
+        <span>➜</span> Watch on YouTube
+      </a>
+    </div>
+
+    <div class="grid">
+      <div class="release-feature-card">
+        <img src="https://img.youtube.com/vi/mbJNzNj7ACA/hqdefault.jpg" alt="Gevorg Harutyunyan - Gone Gone" class="release-thumb">
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/mbJNzNj7ACA"
+          title="Gevorg Harutyunyan - Gone Gone"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+        <div class="gone-audio">
+          <span class="download-badge">Official Audio</span>
+          <p class="muted">Լսեք “Gone Gone” երգը կայքում՝ նախքան ներբեռնելը։</p>
+          <audio controls preload="metadata">
+            <source src="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+      <div>
+        <div class="cards">
+          <a class="box" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp3" download>
+            <div class="label">MP3 320kbps</div>
+            <div class="value">⬇ Ներբեռնել MP3</div>
+            <div class="status">Արագ download՝ հեռախոսի և share-ի համար</div>
+          </a>
+
+          <a class="box" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.wav" download>
+            <div class="label">WAV High Quality</div>
+            <div class="value">◆ Ներբեռնել WAV</div>
+            <div class="status">Բարձր որակ՝ official archive quality</div>
+          </a>
+
+          <a class="box" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp4" download>
+            <div class="label">MP4 Video</div>
+            <div class="value">▣ Ներբեռնել Video</div>
+            <div class="status">Video տարբերակ՝ social share-ի համար</div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
