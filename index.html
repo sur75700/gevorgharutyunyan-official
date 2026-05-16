@@ -677,12 +677,186 @@
 }
 </style>
 
+
+<style id="royal-songs-catalog-style">
+#songs-catalog {
+  position: relative;
+  z-index: 10;
+  padding: 70px 0;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(216,173,85,.15), transparent 28%),
+    linear-gradient(180deg, #050505 0%, #080704 55%, #0d0904 100%);
+  border-top: 1px solid rgba(216,173,85,.25);
+  border-bottom: 1px solid rgba(216,173,85,.18);
+}
+
+.songs-list {
+  display: grid;
+  gap: 26px;
+  margin-top: 30px;
+}
+
+.song-row {
+  display: grid;
+  grid-template-columns: minmax(280px, 430px) 1fr;
+  gap: 26px;
+  align-items: stretch;
+  padding: 22px;
+  border-radius: 34px;
+  border: 1px solid rgba(255,255,255,.13);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(216,173,85,.12), transparent 30%),
+    linear-gradient(145deg, rgba(255,255,255,.085), rgba(255,255,255,.035)),
+    #080808;
+  box-shadow: 0 28px 85px rgba(0,0,0,.48);
+}
+
+.song-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,.13);
+  box-shadow: 0 20px 60px rgba(0,0,0,.42);
+  background: #000;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.song-kicker {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(216,173,85,.46);
+  background: rgba(216,173,85,.08);
+  color: #fff1b7;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.song-title {
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: .96;
+  letter-spacing: -.045em;
+  margin: 0 0 16px;
+  color: #fff8e8;
+}
+
+.song-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.song-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 950;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.07);
+  color: #fff8e8;
+  text-decoration: none;
+}
+
+.song-action.primary {
+  background: linear-gradient(135deg, #fff1b7, #d8ad55);
+  color: #160f05;
+  box-shadow: 0 16px 45px rgba(216,173,85,.22);
+}
+
+.song-audio {
+  margin-top: 6px;
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(216,173,85,.30);
+  background: rgba(255,255,255,.045);
+}
+
+.song-audio audio {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.song-downloads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+  margin-top: 15px;
+}
+
+.song-download {
+  border-radius: 20px;
+  padding: 15px;
+  border: 1px solid rgba(255,255,255,.13);
+  background: rgba(255,255,255,.055);
+  text-decoration: none;
+}
+
+.song-download strong {
+  display: block;
+  color: #fff8e8;
+  font-size: 17px;
+}
+
+.song-download span {
+  display: block;
+  color: rgba(255,248,232,.70);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  #songs-catalog {
+    padding: 46px 0;
+    margin-top: 0;
+    clear: both;
+  }
+
+  .song-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+    border-radius: 28px;
+  }
+
+  .song-title {
+    font-size: clamp(34px, 10vw, 48px);
+  }
+
+  .song-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .song-downloads {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
 <img src="assets/logo/gh-monogram.png" alt="GH" class="gh-logo-img">
 <span class="sr-only">Gevorg Harutyunyan Official Music</span>
-</a><div class="rightnav"><div class="navlinks"><a href="#music" data-i18n="navMusic">Երաժշտություն</a><a href="#about" data-i18n="navAbout">Մասին</a><a href="#videos" data-i18n="navVideos">Տեսանյութեր</a><a href="#gallery" data-i18n="navGallery">Նկարներ</a><a href="#download" data-i18n="navDownload">Ներբեռնել</a><a href="#booking" data-i18n="navBooking">Պատվերներ</a><a href="#contact" data-i18n="navContact">Կապ</a></div><div class="langs"><button class="lang-btn active" type="button" data-lang="hy">HY</button><button class="lang-btn" type="button" data-lang="en">EN</button><button class="lang-btn" type="button" data-lang="ru">RU</button></div></div></nav></div></header>
+</a><div class="rightnav"><div class="navlinks"><a href="#music" data-i18n="navMusic">Երաժշտություն</a><a href="#about" data-i18n="navAbout">Մասին</a><a href="#videos" data-i18n="navVideos">Տեսանյութեր</a><a href="#gallery" data-i18n="navGallery">Նկարներ</a><a href="#songs-catalog" data-i18n="navDownload">Երգեր</a><a href="#booking" data-i18n="navBooking">Պատվերներ</a><a href="#contact" data-i18n="navContact">Կապ</a></div><div class="langs"><button class="lang-btn active" type="button" data-lang="hy">HY</button><button class="lang-btn" type="button" data-lang="en">EN</button><button class="lang-btn" type="button" data-lang="ru">RU</button></div></div></nav></div></header>
 <main>
 <section class="hero" id="music"><div class="wrap grid"><div>
 <img src="assets/logo/gh-monogram.png" alt="GH logo" class="gh-hero-logo">
@@ -692,92 +866,95 @@
 <section id="about"><div class="wrap"><div class="section-head"><h2 data-i18n="aboutTitle">Արտիստի մասին</h2><p class="muted" data-i18n="aboutText">Գևորգ Հարությունյանը հայկական երաժշտության կատարող է։ Այս պաշտոնական կայքը ստեղծված է տեսանյութերի, կապի, պատվերների և երաժշտական հղումների համար։</p></div><div class="cards"><div class="box"><div class="label" data-i18n="artistLabel">Արտիստ</div><div class="value" data-i18n="artistName">Գևորգ Հարությունյան</div><div class="status">Gevorg Harutyunyan • Геворг Арутюнян</div></div><div class="box"><div class="label" data-i18n="styleLabel">Ոճ</div><div class="value" data-i18n="styleValue">Հայկական / Պոպուրի</div><div class="status" data-i18n="styleStatus">Հզոր բեմական էներգիա</div></div><div class="box"><div class="label" data-i18n="eventsLabel">Միջոցառումներ</div><div class="value" data-i18n="eventsValue">Հարսանիքներ և խնջույքներ</div><div class="status" data-i18n="eventsStatus">Պատվերների համար կապ հաստատեք</div></div></div></div></section>
 <section id="gallery"><div class="wrap"><div class="section-head"><h2 data-i18n="galleryTitle">Նկարներ</h2><p class="muted" data-i18n="galleryText">Պաշտոնական լուսանկարներ՝ բեմական և artist profile-ի համար։</p></div><div class="gallery"><img src="assets/wide.jpeg" alt="Gevorg Harutyunyan stage photo"><div class="gallery-side"><img src="assets/portrait.jpeg" alt="Gevorg Harutyunyan portrait stage"><img src="assets/hero.jpeg" alt="Gevorg Harutyunyan official portrait"></div></div></div></section>
 
-<section id="download">
+
+<section id="songs-catalog">
   <div class="wrap">
     <div class="section-head">
-      <h2 data-i18n="downloadTitle">Ներբեռնել երգը</h2>
-      <p class="muted" data-i18n="downloadText">
-        Ներբեռնեք “Պոպուրի” կատարումը պաշտոնական կայքից՝ MP3, WAV բարձր որակով կամ MP4 video տարբերակով։
-      </p>
-    </div>
-
-    <div class="cards">
-      <a class="box" href="assets/music/gevorg-harutyunyan-popurri.mp3" download>
-        <div class="label">MP3 320kbps</div>
-        <div class="value" data-i18n="downloadMp3">⬇ Ներբեռնել MP3</div>
-        <div class="status" data-i18n="downloadMp3Text">Արագ ներբեռնում հեռախոսի և share-ի համար</div>
-      </a>
-
-      <a class="box" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
-        <div class="label">WAV High Quality</div>
-        <div class="value" data-i18n="downloadWav">◆ Ներբեռնել WAV</div>
-        <div class="status" data-i18n="downloadWavText">Բարձր որակ՝ արխիվի և պրոֆ օգտագործման համար</div>
-      </a>
-
-      <a class="box" href="assets/music/gevorg-harutyunyan-popurri.mp4" download>
-        <div class="label">MP4 Video</div>
-        <div class="value" data-i18n="downloadVideo">▣ Ներբեռնել Video</div>
-        <div class="status" data-i18n="downloadVideoText">Կարճ video տարբերակ՝ social share-ի համար</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<section id="gone-gone-release">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="download-badge">New Official Release</span>
-      <h2>Gone Gone</h2>
+      <span class="download-badge">Official Music Catalog</span>
+      <h2>Երգերի ցանկ</h2>
       <p class="muted">
-        Նոր պաշտոնական երգ՝ Gevorg Harutyunyan-ի կատարմամբ։ Popurri-ն մնում է առաջին release-ը, իսկ “Gone Gone”-ը ավելացվել է որպես նոր երգ։
+        Լսեք պաշտոնական երգերը, դիտեք YouTube-ում և ներբեռնեք MP3, WAV կամ MP4 տարբերակները։
       </p>
-      <a class="release-arrow-link" href="https://youtu.be/mbJNzNj7ACA" target="_blank" rel="noopener">
-        <span>➜</span> Watch on YouTube
-      </a>
     </div>
 
-    <div class="grid">
-      <div class="release-feature-card">
-        <img src="https://img.youtube.com/vi/mbJNzNj7ACA/hqdefault.jpg" alt="Gevorg Harutyunyan - Gone Gone" class="release-thumb">
-        <iframe
-          class="video"
-          src="https://www.youtube.com/embed/mbJNzNj7ACA"
-          title="Gevorg Harutyunyan - Gone Gone"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+    <div class="songs-list">
 
-        <div class="gone-audio">
-          <span class="download-badge">Official Audio</span>
-          <p class="muted">Լսեք “Gone Gone” երգը կայքում՝ նախքան ներբեռնելը։</p>
-          <audio controls preload="metadata">
-            <source src="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp3" type="audio/mpeg">
-          </audio>
+      <article class="song-row" id="popurri-song">
+        <div>
+          <img class="song-cover" src="https://img.youtube.com/vi/7nr2GSGUavk/hqdefault.jpg" alt="Gevorg Harutyunyan - Popurri">
         </div>
-      </div>
 
-      <div>
-        <div class="cards">
-          <a class="box" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp3" download>
-            <div class="label">MP3 320kbps</div>
-            <div class="value">⬇ Ներբեռնել MP3</div>
-            <div class="status">Արագ download՝ հեռախոսի և share-ի համար</div>
-          </a>
+        <div class="song-info">
+          <span class="song-kicker">Release 01</span>
+          <h3 class="song-title">Popurri</h3>
 
-          <a class="box" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.wav" download>
-            <div class="label">WAV High Quality</div>
-            <div class="value">◆ Ներբեռնել WAV</div>
-            <div class="status">Բարձր որակ՝ official archive quality</div>
-          </a>
+          <div class="song-actions">
+            <a class="song-action primary" href="https://youtu.be/7nr2GSGUavk" target="_blank" rel="noopener">➜ Watch on YouTube</a>
+            <a class="song-action" href="#popurri-audio">Listen</a>
+          </div>
 
-          <a class="box" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp4" download>
-            <div class="label">MP4 Video</div>
-            <div class="value">▣ Ներբեռնել Video</div>
-            <div class="status">Video տարբերակ՝ social share-ի համար</div>
-          </a>
+          <div class="song-audio" id="popurri-audio">
+            <span class="download-badge">Official Audio</span>
+            <audio controls preload="metadata">
+              <source src="assets/music/gevorg-harutyunyan-popurri.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div class="song-downloads">
+            <a class="song-download" href="assets/music/gevorg-harutyunyan-popurri.mp3" download>
+              <strong>⬇ MP3</strong>
+              <span>320kbps</span>
+            </a>
+            <a class="song-download" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
+              <strong>◆ WAV</strong>
+              <span>High Quality</span>
+            </a>
+            <a class="song-download" href="assets/music/gevorg-harutyunyan-popurri.mp4" download>
+              <strong>▣ MP4</strong>
+              <span>Video</span>
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="song-row" id="gone-gone-song">
+        <div>
+          <img class="song-cover" src="https://img.youtube.com/vi/mbJNzNj7ACA/hqdefault.jpg" alt="Gevorg Harutyunyan - Gone Gone">
+        </div>
+
+        <div class="song-info">
+          <span class="song-kicker">Release 02</span>
+          <h3 class="song-title">Gone Gone</h3>
+
+          <div class="song-actions">
+            <a class="song-action primary" href="https://youtu.be/mbJNzNj7ACA" target="_blank" rel="noopener">➜ Watch on YouTube</a>
+            <a class="song-action" href="#gone-gone-audio">Listen</a>
+          </div>
+
+          <div class="song-audio" id="gone-gone-audio">
+            <span class="download-badge">Official Audio</span>
+            <audio controls preload="metadata">
+              <source src="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div class="song-downloads">
+            <a class="song-download" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp3" download>
+              <strong>⬇ MP3</strong>
+              <span>320kbps</span>
+            </a>
+            <a class="song-download" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.wav" download>
+              <strong>◆ WAV</strong>
+              <span>High Quality</span>
+            </a>
+            <a class="song-download" href="assets/music/gone-gone/gevorg-harutyunyan-gone-gone.mp4" download>
+              <strong>▣ MP4</strong>
+              <span>Video</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
