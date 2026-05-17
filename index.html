@@ -851,6 +851,70 @@
 }
 </style>
 
+
+<style id="royal-heart-like-style">
+.song-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.royal-like-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,.18), transparent 30%),
+    rgba(255,255,255,.065);
+  color: rgba(255,248,232,.72);
+  display: inline-grid;
+  place-items: center;
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow: 0 14px 34px rgba(0,0,0,.28);
+}
+
+.royal-like-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: rgba(216,173,85,.55);
+  color: #fff1b7;
+}
+
+.royal-like-btn.is-liked {
+  color: #ff4d6d;
+  border-color: rgba(255,77,109,.55);
+  background:
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,.22), transparent 30%),
+    rgba(255,77,109,.13);
+  box-shadow: 0 16px 45px rgba(255,77,109,.20);
+}
+
+.royal-like-btn.is-liked .heart-symbol {
+  animation: heart-pop .28s ease;
+}
+
+@keyframes heart-pop {
+  0% { transform: scale(.7); }
+  70% { transform: scale(1.24); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 900px) {
+  .song-title-row {
+    gap: 10px;
+  }
+
+  .royal-like-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 23px;
+  }
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
@@ -886,7 +950,12 @@
 
         <div class="song-info">
           <span class="song-kicker" data-i18n="release01">Release 01</span>
-          <h3 class="song-title">Popurri</h3>
+          <div class="song-title-row">
+            <h3 class="song-title">Popurri</h3>
+            <button class="royal-like-btn" type="button" data-like-id="popurri" aria-label="Like Popurri">
+              <span class="heart-symbol">♡</span>
+            </button>
+          </div>
 
           <div class="song-actions">
             <a class="song-action primary" href="https://youtu.be/7nr2GSGUavk" target="_blank" rel="noopener" data-i18n="watchYoutube">➜ Դիտել YouTube-ում</a>
@@ -924,7 +993,12 @@
 
         <div class="song-info">
           <span class="song-kicker" data-i18n="release02">Release 02</span>
-          <h3 class="song-title">Gone Gone</h3>
+          <div class="song-title-row">
+            <h3 class="song-title">Gone Gone</h3>
+            <button class="royal-like-btn" type="button" data-like-id="gone-gone" aria-label="Like Gone Gone">
+              <span class="heart-symbol">♡</span>
+            </button>
+          </div>
 
           <div class="song-actions">
             <a class="song-action primary" href="https://youtu.be/mbJNzNj7ACA" target="_blank" rel="noopener" data-i18n="watchYoutube">➜ Դիտել YouTube-ում</a>
@@ -981,5 +1055,32 @@ const buttons=document.querySelectorAll(".lang-btn");const nodes=document.queryS
 function setLang(lang){const dict=translations[lang]||translations.hy;nodes.forEach(n=>{const k=n.dataset.i18n;if(dict[k])n.textContent=dict[k]});buttons.forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));document.documentElement.lang=lang;localStorage.setItem("siteLang",lang)}
 buttons.forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));setLang(localStorage.getItem("siteLang")||"hy");
 </script>
+
+<script id="royal-heart-like-script">
+(function () {
+  const buttons = document.querySelectorAll(".royal-like-btn");
+
+  function key(id) {
+    return "gevorg_like_" + id;
+  }
+
+  buttons.forEach((button) => {
+    const id = button.dataset.likeId;
+    const heart = button.querySelector(".heart-symbol");
+
+    if (localStorage.getItem(key(id)) === "1") {
+      button.classList.add("is-liked");
+      if (heart) heart.textContent = "♥";
+    }
+
+    button.addEventListener("click", () => {
+      const liked = button.classList.toggle("is-liked");
+      localStorage.setItem(key(id), liked ? "1" : "0");
+      if (heart) heart.textContent = liked ? "♥" : "♡";
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
