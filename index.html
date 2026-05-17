@@ -984,6 +984,24 @@
 }
 </style>
 
+
+<style id="global-like-count-visibility-fix">
+.global-like-count {
+  display: inline-flex !important;
+  min-width: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+  font-size: 14px !important;
+  font-weight: 950 !important;
+  color: #fff1b7 !important;
+}
+
+.royal-like-btn {
+  gap: 7px !important;
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
@@ -1022,7 +1040,7 @@
           <div class="song-title-row">
             <h3 class="song-title">Popurri</h3>
             <button class="royal-like-btn" type="button" data-like-id="popurri" aria-label="Like Popurri">
-              <span class="heart-symbol">♡</span>
+              <span class="heart-symbol">♡</span><span class="global-like-count">0</span>
             </button>
           </div>
 
@@ -1065,7 +1083,7 @@
           <div class="song-title-row">
             <h3 class="song-title">Gone Gone</h3>
             <button class="royal-like-btn" type="button" data-like-id="gone-gone" aria-label="Like Gone Gone">
-              <span class="heart-symbol">♡</span>
+              <span class="heart-symbol">♡</span><span class="global-like-count">0</span>
             </button>
           </div>
 
