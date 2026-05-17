@@ -5,3 +5,4 @@ backup_before_arqa_v2/
 *.bak
 .DS_Store
 Thumbs.db
+firebase_config.tmp

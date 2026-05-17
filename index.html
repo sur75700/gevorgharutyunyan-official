@@ -915,6 +915,75 @@
 }
 </style>
 
+
+<style id="global-like-counter-style">
+.song-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.royal-like-btn {
+  min-width: 76px;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,.18), transparent 30%),
+    rgba(255,255,255,.065);
+  color: rgba(255,248,232,.82);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 22px;
+  font-weight: 950;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow: 0 14px 34px rgba(0,0,0,.28);
+}
+
+.royal-like-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: rgba(216,173,85,.55);
+  color: #fff1b7;
+}
+
+.royal-like-btn.is-liked {
+  color: #ff4d6d;
+  border-color: rgba(255,77,109,.55);
+  background:
+    radial-gradient(circle at 35% 20%, rgba(255,255,255,.22), transparent 30%),
+    rgba(255,77,109,.13);
+  box-shadow: 0 16px 45px rgba(255,77,109,.20);
+}
+
+.royal-like-btn.is-liked .heart-symbol {
+  animation: heart-pop .28s ease;
+}
+
+.global-like-count {
+  font-size: 14px;
+  color: #fff1b7;
+}
+
+@keyframes heart-pop {
+  0% { transform: scale(.7); }
+  70% { transform: scale(1.24); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 900px) {
+  .royal-like-btn {
+    min-width: 68px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+</style>
+
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="assets/music/gevorg-harutyunyan-popurri.wav" download>
@@ -1056,30 +1125,86 @@ function setLang(lang){const dict=translations[lang]||translations.hy;nodes.forE
 buttons.forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));setLang(localStorage.getItem("siteLang")||"hy");
 </script>
 
-<script id="royal-heart-like-script">
-(function () {
-  const buttons = document.querySelectorAll(".royal-like-btn");
 
-  function key(id) {
-    return "gevorg_like_" + id;
+
+
+<script type="module" id="global-firebase-likes-script">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  onSnapshot,
+  setDoc,
+  updateDoc,
+  increment,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD1gO6atILOhwDuawBICg61YO-cWg-1NNc",
+  authDomain: "gevorgharutyunyanofficia-7c22d.firebaseapp.com",
+  projectId: "gevorgharutyunyanofficia-7c22d",
+  storageBucket: "gevorgharutyunyanofficia-7c22d.firebasestorage.app",
+  messagingSenderId: "225532871631",
+  appId: "1:225532871631:web:015ec7ba8477a4534b48ba",
+  measurementId: "G-VN0XS4RXVC"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const likedLocalKey = (id) => "gevorg_global_like_" + id;
+
+document.querySelectorAll(".royal-like-btn[data-like-id]").forEach((button) => {
+  const songId = button.dataset.likeId;
+  const countNode = button.querySelector(".global-like-count");
+  const heartNode = button.querySelector(".heart-symbol");
+  const ref = doc(db, "songLikes", songId);
+
+  if (localStorage.getItem(likedLocalKey(songId)) === "1") {
+    button.classList.add("is-liked");
+    if (heartNode) heartNode.textContent = "♥";
   }
 
-  buttons.forEach((button) => {
-    const id = button.dataset.likeId;
-    const heart = button.querySelector(".heart-symbol");
-
-    if (localStorage.getItem(key(id)) === "1") {
-      button.classList.add("is-liked");
-      if (heart) heart.textContent = "♥";
-    }
-
-    button.addEventListener("click", () => {
-      const liked = button.classList.toggle("is-liked");
-      localStorage.setItem(key(id), liked ? "1" : "0");
-      if (heart) heart.textContent = liked ? "♥" : "♡";
-    });
+  onSnapshot(ref, (snap) => {
+    const data = snap.exists() ? snap.data() : { count: 0 };
+    if (countNode) countNode.textContent = String(Math.max(0, data.count || 0));
   });
-})();
+
+  button.addEventListener("click", async () => {
+    if (button.disabled) return;
+
+    const alreadyLiked = localStorage.getItem(likedLocalKey(songId)) === "1";
+    button.disabled = true;
+
+    try {
+      if (!alreadyLiked) {
+        await setDoc(ref, {
+          count: increment(1),
+          updatedAt: serverTimestamp()
+        }, { merge: true });
+
+        localStorage.setItem(likedLocalKey(songId), "1");
+        button.classList.add("is-liked");
+        if (heartNode) heartNode.textContent = "♥";
+      } else {
+        await updateDoc(ref, {
+          count: increment(-1),
+          updatedAt: serverTimestamp()
+        });
+
+        localStorage.setItem(likedLocalKey(songId), "0");
+        button.classList.remove("is-liked");
+        if (heartNode) heartNode.textContent = "♡";
+      }
+    } catch (error) {
+      console.error("Like update failed:", error);
+      alert("Like-ը չհաջողվեց պահպանել։ Փորձիր նորից։");
+    } finally {
+      button.disabled = false;
+    }
+  });
+});
 </script>
 
 </body>
